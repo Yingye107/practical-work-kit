@@ -23,6 +23,7 @@ RELEASE_FILES = {
     'LICENSE', 'SOURCE_NOTICES.txt', 'INSTALL.txt', 'QUICK_START.txt',
     'README.md', 'README.zh-TW.md', 'CHANGELOG.md', 'CONTRIBUTING.md',
     'SECURITY.md', 'CODE_OF_CONDUCT.md', 'docs/EXAMPLES.md',
+    'docs/assets/social-preview.svg', 'docs/assets/social-preview.png',
 }
 for role, refs in REFERENCES.items():
     RELEASE_FILES.update({f'skills/{role}/SKILL.md', f'skills/{role}/agents/openai.yaml'})
@@ -35,6 +36,10 @@ REPO_FILES = RELEASE_FILES | {
     'tools/validate.py', 'tools/build_release.py', 'tests/test_validation.py',
 }
 SKIP_DIRS = {'.git', '__pycache__', 'dist', '.venv', 'venv'}
+# Only this reviewed PNG may bypass text decoding. Pin replacement bytes after review.
+BINARY_SHA256 = {
+    'docs/assets/social-preview.png': 'ef1a9c6889ad740f5d7c8f770c0e73aff70a54418b9507409d13d4a83e9a61f4',
+}
 SIGNATURES = {
     'private_key': r'-----BEGIN (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----',
     'github_token': r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})',
@@ -103,6 +108,9 @@ def validate_tree(root=ROOT):
     require(set(files) == REPO_FILES, 'public_file_set')
     texts = {}
     for rel, data in files.items():
+        if rel in BINARY_SHA256:
+            require(sha(data) == BINARY_SHA256[rel], 'binary_asset_hash:' + rel)
+            continue
         try:
             text = data.decode('utf-8')
         except UnicodeDecodeError as error:

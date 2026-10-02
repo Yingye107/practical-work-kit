@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<title id="title">Practical Work Kit</title>
+<desc id="desc">Four AI skills: check work, challenge plans, shape ideas, and carry context. Published by YINGYE Studio.</desc>
+<rect width="1280" height="640" fill="#f5f3ec"/>
+<rect x="56" y="46" width="7" height="27" rx="3" fill="#176b54"/>
+<text x="78" y="67" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#176b54">FOUR AI SKILLS FOR EVERYDAY WORK</text>
+<text x="53" y="169" font-family="Segoe UI,Arial,sans-serif" font-size="76" font-weight="700" fill="#182b2a">Practical Work Kit</text>
+<text x="56" y="225" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="400" fill="#4e6260">Bring your draft. Get a useful next step.</text>
+<text x="56" y="269" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="400" fill="#4e6260">Check a result, test a plan, shape an idea, or hand off your progress.</text>
+<rect x="56" y="322" width="276" height="200" rx="18" fill="#ffffff" stroke="#dce3df"/>
+<rect x="78" y="344" width="32" height="32" rx="8" fill="#176b54"/>
+<text x="88" y="367" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#ffffff">1</text>
+<text x="78" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700" fill="#182b2a">Check work</text>
+<text x="78" y="463" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Find errors and omissions.</text>
+<text x="78" y="492" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Know what to fix first.</text>
+<rect x="354" y="322" width="276" height="200" rx="18" fill="#ffffff" stroke="#dce3df"/>
+<rect x="376" y="344" width="32" height="32" rx="8" fill="#176b54"/>
+<text x="386" y="367" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#ffffff">2</text>
+<text x="376" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700" fill="#182b2a">Challenge plans</text>
+<text x="376" y="463" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Test the assumptions.</text>
+<text x="376" y="492" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Choose a smaller first step.</text>
+<rect x="652" y="322" width="276" height="200" rx="18" fill="#ffffff" stroke="#dce3df"/>
+<rect x="674" y="344" width="32" height="32" rx="8" fill="#176b54"/>
+<text x="684" y="367" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#ffffff">3</text>
+<text x="674" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700" fill="#182b2a">Shape ideas</text>
+<text x="674" y="463" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Turn a rough thought</text>
+<text x="674" y="492" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">into a usable direction.</text>
+<rect x="950" y="322" width="276" height="200" rx="18" fill="#ffffff" stroke="#dce3df"/>
+<rect x="972" y="344" width="32" height="32" rx="8" fill="#176b54"/>
+<text x="982" y="367" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#ffffff">4</text>
+<text x="972" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700" fill="#182b2a">Carry context</text>
+<text x="972" y="463" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Keep decisions and drafts.</text>
+<text x="972" y="492" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#4e6260">Continue with less rework.</text>
+<text x="56" y="593" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#176b54">YINGYE Studio</text>
+<text x="670" y="593" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" fill="#4e6260">github.com/Yingye107/practical-work-kit</text>
+</svg>

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add a project banner and a one-minute budget example to both READMEs.
+- Keep the reviewed PNG and editable SVG with the package; validation requires the PNG's reviewed fingerprint.
+
 ## 0.1.0 — 2026-10-02
 
 First public GitHub release.

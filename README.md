@@ -1,5 +1,7 @@
 # Practical Work Kit · 實用工作四助手
 
+![Four AI skills: check work, challenge plans, shape ideas, and carry context.](docs/assets/social-preview.png)
+
 Four reusable AI skills for checking work, challenging plans, shaping ideas, and carrying context into the next conversation.
 
 [繁體中文](README.zh-TW.md) · [Examples](docs/EXAMPLES.md) · [Latest release](https://github.com/Yingye107/practical-work-kit/releases/latest) · [License](LICENSE)
@@ -12,6 +14,21 @@ Give the assistant the material you already have and say what you need. The skil
 | `challenge-my-plan` | A second perspective on a plan and its assumptions | “Challenge this launch plan and suggest a smaller first test.” |
 | `shape-my-idea` | A concrete direction, draft, or first experiment | “Turn this idea into three video concepts I can make this weekend.” |
 | `carry-my-context` | A concise note for another person or conversation | “Keep my decisions, current draft, and next step in a handoff.” |
+
+## See it in one minute
+
+Try a small budget check after installation:
+
+```text
+Use $check-my-work to check this budget.
+Venue: 3,000. Materials: 2,000. Listed total: 6,000.
+I have not provided receipts or confirmed tax.
+Give me a short correction and say what remains unchecked.
+```
+
+**What a useful answer should do:** correct the total to **5,000**, flag the **1,000** difference, and leave receipts and tax marked as unverified. You can immediately fix the arithmetic and see what still needs checking.
+
+This is a worked example, not a guaranteed model response. See [four complete input/output examples](docs/EXAMPLES.md) to try the other skills.
 
 ## Install in Codex
 

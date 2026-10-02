@@ -53,6 +53,12 @@ class PackageControls(unittest.TestCase):
         with self.assertRaisesRegex(ValidationError, '^public_file_set$'):
             validate_tree(self.root)
 
+    def test_preview_replacement_requires_review(self):
+        path = self.root / 'docs/assets/social-preview.png'
+        path.write_bytes(path.read_bytes() + b'unreviewed appended data')
+        with self.assertRaisesRegex(ValidationError, '^binary_asset_hash:docs/assets/social-preview.png$'):
+            validate_tree(self.root)
+
     def test_tracked_ignored_file_rejected(self):
         private = self.root / '.venv/private-notes.txt'
         private.parent.mkdir()
