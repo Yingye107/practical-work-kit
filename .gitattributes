@@ -1,0 +1,2 @@
+# Preserve reviewed bytes across platforms, including upstream license fingerprints.
+* -text

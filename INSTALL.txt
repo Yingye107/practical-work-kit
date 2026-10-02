@@ -1,0 +1,30 @@
+Practical Work Kit — Codex installation / Codex 安裝
+
+From GitHub / 從 GitHub：
+codex plugin marketplace add Yingye107/practical-work-kit --ref main
+codex plugin add practical-work-kit@practical-work-kit
+
+For release 0.1.0, use --ref v0.1.0 instead of --ref main.
+要固定 0.1.0 版本，把 --ref main 改成 --ref v0.1.0。
+
+From a release ZIP / 從 ZIP：
+Extract into a dedicated folder with plugin.json, skills/, and .agents/ at its root.
+解壓到專用資料夾，根目錄直接有 plugin.json、skills/ 與 .agents/。
+Replace the example path below with your extracted folder:
+codex plugin marketplace add "D:/MyPlugins/practical-work-kit"
+codex plugin add practical-work-kit@practical-work-kit
+
+Start a new conversation and follow QUICK_START.txt.
+安裝後開新對話，貼上內容並照 QUICK_START.txt 提出需求。
+Inspect the installed plugin / 確認安裝狀態：
+codex plugin list --marketplace practical-work-kit --json
+
+Install one source of these skills; avoid enabling duplicate copies.
+只選一個來源，避免和既有本機版本或同名單一技能重複啟用。
+If your CLI does not recognize plugin commands, check your host's documentation:
+https://developers.openai.com/plugins/build/plugins
+
+This package adds no background service or account connection. GitHub distribution
+does not imply a listing in the OpenAI public plugin directory or support in every host.
+本包不增加背景服務或帳號連接。GitHub 發布不代表已在 OpenAI 公開目錄上架，
+也不代表每一種宿主都能直接匯入。詳見 README.md／README.zh-TW.md。

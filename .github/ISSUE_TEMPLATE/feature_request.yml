@@ -1,0 +1,10 @@
+name: Improvement idea
+description: Suggest a change that makes a real task easier.
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The task and proposed improvement
+      description: Explain the actual difficulty and how your idea would reduce it. A small example is enough.
+    validations:
+      required: true

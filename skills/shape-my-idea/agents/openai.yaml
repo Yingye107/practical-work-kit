@@ -1,0 +1,4 @@
+interface:
+  display_name: "創意總監"
+  short_description: "把模糊點子變成具體方向與第一步，照顧受眾、風格和實際資源。"
+  default_prompt: "使用 $shape-my-idea 把這個點子變成具體方向，符合我的時間與資源。"

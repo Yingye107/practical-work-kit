@@ -1,0 +1,4 @@
+interface:
+  display_name: "交接助手"
+  short_description: "保留決策、草稿、進度與下一步，讓下一個對話或接手者能接續。"
+  default_prompt: "使用 $carry-my-context 整理這段對話，給我可貼到新對話的交接。"

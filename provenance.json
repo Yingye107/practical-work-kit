@@ -1,0 +1,197 @@
+{
+  "adaptation": "Newly authored instructions informed by selected upstream methods",
+  "sources": [
+    {
+      "repo": "Pablo-aps/prove-it",
+      "commit": "4c5a6426a620019239b094f8cd0721ee25af59d4",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/Pablo-aps/prove-it/4c5a6426a620019239b094f8cd0721ee25af59d4/LICENSE",
+          "sha256": "8ffcb5a46bf5a997330b390fad5994519e5b89b909fd8a09f129ebfa4f9b8d5d"
+        },
+        {
+          "path": "skills/prove-it/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Pablo-aps/prove-it/4c5a6426a620019239b094f8cd0721ee25af59d4/skills/prove-it/SKILL.md",
+          "sha256": "af7a739fc2a37107aab1774f60878693abcf66d25f6e44f87156a46953571b34"
+        }
+      ]
+    },
+    {
+      "repo": "bmad-code-org/BMAD-METHOD",
+      "commit": "1cbcfa272fe65787c06a1fa164a901f46117cca7",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/1cbcfa272fe65787c06a1fa164a901f46117cca7/LICENSE",
+          "sha256": "0aa79baf6328b4a1e694ce10a12ffc36d7666554da128dff0e8fcda0fc536a66"
+        },
+        {
+          "path": "skills/bmad-review/SKILL.md",
+          "url": "https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/1cbcfa272fe65787c06a1fa164a901f46117cca7/skills/bmad-review/SKILL.md",
+          "sha256": "2d7cd09b03263824116cb7b6c820f932f3c5b2533e3b7c84fe975d53fafb0568"
+        },
+        {
+          "path": "skills/bmad-review/customize.toml",
+          "url": "https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/1cbcfa272fe65787c06a1fa164a901f46117cca7/skills/bmad-review/customize.toml",
+          "sha256": "005dde84f09c0b1ab0ef0ee87f1ed1985922c893089cc3595157611fb83b3ebd"
+        },
+        {
+          "path": "skills/bmad-review/references/lens-adversarial.md",
+          "url": "https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/1cbcfa272fe65787c06a1fa164a901f46117cca7/skills/bmad-review/references/lens-adversarial.md",
+          "sha256": "7c5ce97ab2f3ecb96ceb6aa76417f68c1b7df535edd3cc51666d8e1216e6e557"
+        },
+        {
+          "path": "skills/bmad-review/references/lens-verification-gap.md",
+          "url": "https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/1cbcfa272fe65787c06a1fa164a901f46117cca7/skills/bmad-review/references/lens-verification-gap.md",
+          "sha256": "e7123d81171eeeee1b3782d13d94c2988969fe357dd71949131a5eb97803e2c6"
+        }
+      ]
+    },
+    {
+      "repo": "jumpifequal/handoff-skill",
+      "commit": "0e6cb31a66ede5c4791e8fa077e23bee002bb698",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/jumpifequal/handoff-skill/0e6cb31a66ede5c4791e8fa077e23bee002bb698/LICENSE",
+          "sha256": "89ac72ec9c42af097730db0cbf2992121c4ee8dbe61dc01b104725e47ae45120"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/jumpifequal/handoff-skill/0e6cb31a66ede5c4791e8fa077e23bee002bb698/README.md",
+          "sha256": "79ad9b11ac27c205002e5179cab4636be1fde3f1b900b75dc141ad1772bebc61"
+        },
+        {
+          "path": "SKILL.md",
+          "url": "https://raw.githubusercontent.com/jumpifequal/handoff-skill/0e6cb31a66ede5c4791e8fa077e23bee002bb698/SKILL.md",
+          "sha256": "1e1692bf5eb73f883b5502109d71c8f69c1b38d04f0f5b527fe7b0fd53c0fbd4"
+        },
+        {
+          "path": "references/handoff-template.md",
+          "url": "https://raw.githubusercontent.com/jumpifequal/handoff-skill/0e6cb31a66ede5c4791e8fa077e23bee002bb698/references/handoff-template.md",
+          "sha256": "0205e813a07a999cc6369df84a43a730bd82c9e65ae41096f1b01abbbfcdbb50"
+        },
+        {
+          "path": "references/handoff-validation.md",
+          "url": "https://raw.githubusercontent.com/jumpifequal/handoff-skill/0e6cb31a66ede5c4791e8fa077e23bee002bb698/references/handoff-validation.md",
+          "sha256": "bb1b34eb9184c698b9b3d62fe8faaf40b7016ff955afa06b1b191bd316490e91"
+        }
+      ]
+    },
+    {
+      "repo": "msitarzewski/agency-agents",
+      "commit": "e31d699e06e78056489bb72282b754dfaa4b254a",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/msitarzewski/agency-agents/e31d699e06e78056489bb72282b754dfaa4b254a/LICENSE",
+          "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f"
+        },
+        {
+          "path": "design/design-brand-guardian.md",
+          "url": "https://raw.githubusercontent.com/msitarzewski/agency-agents/e31d699e06e78056489bb72282b754dfaa4b254a/design/design-brand-guardian.md",
+          "sha256": "d1d5c78af85d4d35be94b93d5c011d17e3cf5dcb69b2037a3ebf3059803b893e"
+        },
+        {
+          "path": "marketing/marketing-content-creator.md",
+          "url": "https://raw.githubusercontent.com/msitarzewski/agency-agents/e31d699e06e78056489bb72282b754dfaa4b254a/marketing/marketing-content-creator.md",
+          "sha256": "26ddce44f057068a3935c13d53becd3c57385fb47fcdcfdd891b80269070b3d5"
+        }
+      ]
+    },
+    {
+      "repo": "obra/superpowers",
+      "commit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/obra/superpowers/8ca22dba9a94f28898bbce59f2537ff4d87c747d/LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        },
+        {
+          "path": "skills/verification-before-completion/SKILL.md",
+          "url": "https://raw.githubusercontent.com/obra/superpowers/8ca22dba9a94f28898bbce59f2537ff4d87c747d/skills/verification-before-completion/SKILL.md",
+          "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+        },
+        {
+          "path": "skills/requesting-code-review/SKILL.md",
+          "url": "https://raw.githubusercontent.com/obra/superpowers/8ca22dba9a94f28898bbce59f2537ff4d87c747d/skills/requesting-code-review/SKILL.md",
+          "sha256": "cfcee1b06774e7c0517f1e09be1a11f2d5680257072723e709ddbcf7e08b795a"
+        },
+        {
+          "path": "skills/requesting-code-review/code-reviewer.md",
+          "url": "https://raw.githubusercontent.com/obra/superpowers/8ca22dba9a94f28898bbce59f2537ff4d87c747d/skills/requesting-code-review/code-reviewer.md",
+          "sha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb"
+        }
+      ]
+    },
+    {
+      "repo": "phuryn/pm-skills",
+      "commit": "8607e3b077817f89bf4a9b623246219734ac3be0",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/LICENSE",
+          "sha256": "a2c922f9b81b4f40347ddfa79c38eda0f1278b5a6d108bd4099b4da254c774ee"
+        },
+        {
+          "path": "pm-product-discovery/skills/brainstorm-ideas-new/SKILL.md",
+          "url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/pm-product-discovery/skills/brainstorm-ideas-new/SKILL.md",
+          "sha256": "400e5e0760d6dc52bfe34953d90db6223df532ce720d7e85568696ab5c3d34d2"
+        },
+        {
+          "path": "pm-product-discovery/skills/identify-assumptions-new/SKILL.md",
+          "url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/pm-product-discovery/skills/identify-assumptions-new/SKILL.md",
+          "sha256": "962b1e0c01e45ceb930e4d806c0ffb05e36cf25dcfef5497e7828d89d6ae474b"
+        },
+        {
+          "path": "pm-product-discovery/skills/prioritize-assumptions/SKILL.md",
+          "url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/pm-product-discovery/skills/prioritize-assumptions/SKILL.md",
+          "sha256": "18160a0138c788790c9dd22995ffdcfac485c1f0599c170d8668678e59766073"
+        },
+        {
+          "path": "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md",
+          "url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md",
+          "sha256": "fe66d9ba76cf6b0e156298c88f752d8e1e62549fe77a7c01c0a74d8679da9334"
+        },
+        {
+          "path": "pm-product-strategy/skills/value-proposition/SKILL.md",
+          "url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/pm-product-strategy/skills/value-proposition/SKILL.md",
+          "sha256": "b07cc0399582fc178be31b513b313d2420c7941dd568b52a0bf6cfb0ab6c4ec7"
+        }
+      ]
+    },
+    {
+      "repo": "uchimata2/handoff-skill",
+      "commit": "b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/uchimata2/handoff-skill/b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8/LICENSE",
+          "sha256": "6fa22bd5a0c0ca288ade7757eaa761b9e41e93259a4d3d64c1f917eaf5772e89"
+        },
+        {
+          "path": "handoff.core.md",
+          "url": "https://raw.githubusercontent.com/uchimata2/handoff-skill/b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8/handoff.core.md",
+          "sha256": "644ac478b01ba1527a63ea504f629283cffd82a52f63e839c505fa362faeac21"
+        },
+        {
+          "path": "flows/create.md",
+          "url": "https://raw.githubusercontent.com/uchimata2/handoff-skill/b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8/flows/create.md",
+          "sha256": "e460ae5efc0c475cb4f35b59fcea08695f314f0623fed920a9261892a0e45873"
+        },
+        {
+          "path": "flows/resume.md",
+          "url": "https://raw.githubusercontent.com/uchimata2/handoff-skill/b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8/flows/resume.md",
+          "sha256": "34ad0aefd70bb3ab6e723fdd7d45b6fa1bb14df4c656ed186a2f3642c06e4b40"
+        },
+        {
+          "path": "flows/reconcile.md",
+          "url": "https://raw.githubusercontent.com/uchimata2/handoff-skill/b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8/flows/reconcile.md",
+          "sha256": "9aec78e3938338bbda501c1587fa496973abfdd358ee897947d935a94f87585d"
+        }
+      ]
+    }
+  ]
+}

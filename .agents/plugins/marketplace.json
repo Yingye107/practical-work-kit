@@ -1,0 +1,23 @@
+{
+  "name": "practical-work-kit",
+  "interface": {
+    "displayName": "實用工作四助手"
+  },
+  "plugins": [
+    {
+      "name": "practical-work-kit",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "interface": {
+        "displayName": "實用工作四助手"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

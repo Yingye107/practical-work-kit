@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible problem with a skill or package.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Remove secrets and private data. For vulnerabilities, use the private reporting link in SECURITY.md."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - check-my-work
+        - challenge-my-plan
+        - shape-my-idea
+        - carry-my-context
+        - installation or packaging
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Example and observed result
+      description: Provide a small redacted input, what happened, and what you expected. Add host and version if relevant.
+    validations:
+      required: true

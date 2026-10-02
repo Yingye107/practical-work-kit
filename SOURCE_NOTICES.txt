@@ -1,0 +1,48 @@
+Practical Work Kit — source acknowledgements
+
+The instructions are newly written and adapted to lightweight, tool-optional workflows.
+The following selected upstream workflows informed their methods. Upstream scripts, hooks,
+services, private logs and runtime dependencies are not bundled. Preserve these notices
+and the applicable licenses when redistributing an adaptation.
+
+Pablo-aps/prove-it
+https://github.com/Pablo-aps/prove-it/tree/4c5a6426a620019239b094f8cd0721ee25af59d4
+License: licenses/Pablo-aps__prove-it.txt
+Selected reference files: skills/prove-it/SKILL.md
+
+bmad-code-org/BMAD-METHOD
+https://github.com/bmad-code-org/BMAD-METHOD/tree/1cbcfa272fe65787c06a1fa164a901f46117cca7
+License: licenses/bmad-code-org__BMAD-METHOD.txt
+Selected reference files: skills/bmad-review/SKILL.md, skills/bmad-review/customize.toml, skills/bmad-review/references/lens-adversarial.md, skills/bmad-review/references/lens-verification-gap.md
+
+jumpifequal/handoff-skill
+https://github.com/jumpifequal/handoff-skill/tree/0e6cb31a66ede5c4791e8fa077e23bee002bb698
+License: licenses/jumpifequal__handoff-skill.txt
+Selected reference files: SKILL.md, references/handoff-template.md, references/handoff-validation.md
+
+msitarzewski/agency-agents
+https://github.com/msitarzewski/agency-agents/tree/e31d699e06e78056489bb72282b754dfaa4b254a
+License: licenses/msitarzewski__agency-agents.txt
+Selected reference files: design/design-brand-guardian.md, marketing/marketing-content-creator.md
+
+obra/superpowers
+https://github.com/obra/superpowers/tree/8ca22dba9a94f28898bbce59f2537ff4d87c747d
+License: licenses/obra__superpowers.txt
+Selected reference files: skills/verification-before-completion/SKILL.md, skills/requesting-code-review/SKILL.md, skills/requesting-code-review/code-reviewer.md
+
+phuryn/pm-skills
+https://github.com/phuryn/pm-skills/tree/8607e3b077817f89bf4a9b623246219734ac3be0
+License: licenses/phuryn__pm-skills.txt
+Selected reference files: pm-product-discovery/skills/brainstorm-ideas-new/SKILL.md, pm-product-discovery/skills/identify-assumptions-new/SKILL.md, pm-product-discovery/skills/prioritize-assumptions/SKILL.md, pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md, pm-product-strategy/skills/value-proposition/SKILL.md
+
+uchimata2/handoff-skill
+https://github.com/uchimata2/handoff-skill/tree/b4296dcc7476d9c4ec8be5ac6c9937b7b7dc23a8
+License: licenses/uchimata2__handoff-skill.txt
+Selected reference files: handoff.core.md, flows/create.md, flows/resume.md, flows/reconcile.md
+
+Adaptation note: BMAD review lenses informed selective critique. Mandatory finding quotas,
+full-framework setup, automatic multi-agent fan-out, and custom configuration resolution
+are intentionally not part of this product. BMAD trademarks belong to their owner.
+
+Source note: jumpifequal README licensing text disagreed with its MIT LICENSE in the
+same captured commit. The actual LICENSE is included; hooks are not included.
