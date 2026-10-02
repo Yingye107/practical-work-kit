@@ -155,7 +155,7 @@ def validate_tree(root=ROOT):
         require(interface.get(key) == './docs/assets/plugin-icon.svg', 'interface_' + key)
     require(interface.get('websiteURL') == 'https://github.com/Yingye107/practical-work-kit', 'interface_websiteURL')
     require(interface.get('supportURL') == 'https://github.com/Yingye107/practical-work-kit/issues', 'interface_supportURL')
-    require(interface.get('privacyPolicyURL') == 'https://github.com/Yingye107/practical-work-kit/blob/main/PRIVACY.md', 'interface_privacyPolicyURL')
+    require(interface.get('privacyPolicyURL') == 'https://raw.githubusercontent.com/Yingye107/practical-work-kit/main/PRIVACY.md', 'interface_privacyPolicyURL')
     require(interface.get('brandColor') == '#176b54', 'interface_brandColor')
     require(isinstance(interface.get('defaultPrompt'), list) and 1 <= len(interface['defaultPrompt']) <= 3 and all(isinstance(prompt, str) and 0 < len(prompt) <= 128 for prompt in interface['defaultPrompt']), 'starter_prompts')
     catalog = parse_json(texts['.agents/plugins/marketplace.json'])

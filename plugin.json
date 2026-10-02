@@ -26,7 +26,7 @@
         "developerName": "YINGYE Studio",
         "websiteURL": "https://github.com/Yingye107/practical-work-kit",
         "supportURL": "https://github.com/Yingye107/practical-work-kit/issues",
-        "privacyPolicyURL": "https://github.com/Yingye107/practical-work-kit/blob/main/PRIVACY.md",
+        "privacyPolicyURL": "https://raw.githubusercontent.com/Yingye107/practical-work-kit/main/PRIVACY.md",
         "brandColor": "#176b54",
         "logo": "./docs/assets/plugin-icon.svg",
         "composerIcon": "./docs/assets/plugin-icon.svg"
