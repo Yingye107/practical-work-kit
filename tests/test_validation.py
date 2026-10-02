@@ -59,6 +59,28 @@ class PackageControls(unittest.TestCase):
         with self.assertRaisesRegex(ValidationError, '^binary_asset_hash:docs/assets/social-preview.png$'):
             validate_tree(self.root)
 
+    def test_listing_icon_replacement_requires_review(self):
+        path = self.root / 'docs/assets/plugin-icon.svg'
+        path.write_bytes(path.read_bytes().replace(b'</svg>', b'<script>alert(1)</script></svg>'))
+        with self.assertRaisesRegex(ValidationError, '^text_asset_hash:docs/assets/plugin-icon.svg$'):
+            validate_tree(self.root)
+
+    def test_listing_icon_required(self):
+        path = self.root / 'plugin.json'
+        manifest = json.loads(path.read_text(encoding='utf-8'))
+        del manifest['extensions']['com.openai']['interface']['logo']
+        path.write_text(json.dumps(manifest, ensure_ascii=False), encoding='utf-8')
+        with self.assertRaisesRegex(ValidationError, '^interface_logo$'):
+            validate_tree(self.root)
+
+    def test_listing_icon_unsafe_reference_rejected(self):
+        path = self.root / 'plugin.json'
+        manifest = json.loads(path.read_text(encoding='utf-8'))
+        manifest['extensions']['com.openai']['interface']['composerIcon'] = '../outside.svg'
+        path.write_text(json.dumps(manifest, ensure_ascii=False), encoding='utf-8')
+        with self.assertRaisesRegex(ValidationError, '^interface_composerIcon$'):
+            validate_tree(self.root)
+
     def test_tracked_ignored_file_rejected(self):
         private = self.root / '.venv/private-notes.txt'
         private.parent.mkdir()
@@ -75,13 +97,15 @@ class PackageControls(unittest.TestCase):
     def test_hardlinked_outputs_do_not_modify_outside_files(self):
         output = self.root / 'dist'
         output.mkdir()
-        for name in ['practical-work-kit-0.1.0.zip', 'SHA256SUMS.txt']:
+        version = json.loads((self.root / 'plugin.json').read_text(encoding='utf-8'))['version']
+        output_names = [f'practical-work-kit-{version}.zip', 'SHA256SUMS.txt']
+        for name in output_names:
             sentinel = self.case / ('outside-' + name)
             sentinel.write_bytes(b'isolated sentinel')
             (output / name).hardlink_to(sentinel)
         result = build(output, self.root)
         self.assertEqual(result['status'], 'PASS')
-        for name in ['practical-work-kit-0.1.0.zip', 'SHA256SUMS.txt']:
+        for name in output_names:
             self.assertEqual((self.case / ('outside-' + name)).read_bytes(), b'isolated sentinel')
             self.assertNotEqual((output / name).read_bytes(), b'isolated sentinel')
 

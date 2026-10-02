@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "practical-work-kit",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Practical, tool-optional help for checking work, challenging plans, shaping ideas, and handing off context.",
   "license": "Apache-2.0",
   "keywords": [
@@ -19,11 +19,17 @@
         "longDescription": "Checks documents and software outcomes, tests proposed plans, develops concrete ideas, and preserves context. Works with the information you provide; tools are optional. Replies in your language. No account connections, background hooks, or required forms. Install this bundle OR a standalone role, not both.",
         "category": "Productivity",
         "defaultPrompt": [
-          "使用 $check-my-work 檢查這份成果，告訴我是否可用、漏了什麼和先修哪裡。",
-          "使用 $challenge-my-plan 挑戰這個計畫，給我有理由的判斷與更可行的做法。",
-          "使用 $shape-my-idea 把這個點子變成具體方向，符合我的時間與資源。"
+          "檢查這份成果，告訴我是否可用、漏了什麼和先修哪裡。",
+          "挑戰這個計畫，給我有理由的判斷與更可行的做法。",
+          "把這個點子變成具體方向，符合我的時間與資源。"
         ],
-        "developerName": "YINGYE Studio"
+        "developerName": "YINGYE Studio",
+        "websiteURL": "https://github.com/Yingye107/practical-work-kit",
+        "supportURL": "https://github.com/Yingye107/practical-work-kit/issues",
+        "privacyPolicyURL": "https://github.com/Yingye107/practical-work-kit/blob/main/PRIVACY.md",
+        "brandColor": "#176b54",
+        "logo": "./docs/assets/plugin-icon.svg",
+        "composerIcon": "./docs/assets/plugin-icon.svg"
       }
     }
   },
