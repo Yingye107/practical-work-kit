@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 — Unreleased
+
+- For features that depend on a trigger or schedule, check whether execution started as well as whether it failed, using an observable result from the actual entry point.
+- Keep this check conditional on the feature being reviewed. No background service, new account connection, or required form is added.
+
 ## 0.1.2 — Unreleased
 
 - Add a public privacy notice and its listing URL to resolve the OpenAI draft's privacy-policy check.
@@ -9,7 +14,7 @@
 - Add a project banner and a one-minute budget example to both READMEs.
 - Keep the reviewed PNG and editable SVG with the package; validation requires the PNG's reviewed fingerprint.
 
-This package is prepared for submission. Version 0.1.1 was uploaded as a draft; it has not been submitted for review or published. Version 0.1.2 addresses that draft's privacy-policy finding and still requires platform checks and the author's legal attestations.
+Version 0.1.1 was used for an initial draft. Version 0.1.2 addressed its privacy-policy finding and was submitted for review on 2026-10-03. Submission does not imply public-directory approval; current platform status must be checked separately.
 
 ## 0.1.0 — 2026-10-02
 
