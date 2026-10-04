@@ -1,0 +1,12 @@
+{
+  "name": "practical-work-kit",
+  "description": "Four practical AI skills to check work, challenge plans, shape ideas, and carry context.",
+  "owner": {"name": "YINGYE Studio"},
+  "plugins": [
+    {
+      "name": "practical-work-kit",
+      "source": "./",
+      "description": "Four practical AI skills to check work, challenge plans, shape ideas, and carry context."
+    }
+  ]
+}

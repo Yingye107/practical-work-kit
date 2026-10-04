@@ -2,7 +2,7 @@
 
 ![四種日常 AI 工作助手：檢查成果、挑戰計畫、發展點子、保存交接。](docs/assets/social-preview.png)
 
-四種可重複使用的 AI 技能：檢查成果、挑戰計畫、發展點子，以及讓下一個對話接得上。
+**Codex、Claude 共用**的四種 AI 技能：檢查成果、挑戰計畫、發展點子，以及讓下一個對話接得上。兩邊使用同一份技能內容。
 
 [English](README.md) · [完整範例](docs/EXAMPLES.md) · [下載最新版](https://github.com/Yingye107/practical-work-kit/releases/latest)
 
@@ -17,7 +17,7 @@
 
 ## 一分鐘看懂它能幫什麼
 
-安裝後，貼上這個小例子：
+安裝後，貼上這個小例子。範例使用 Codex 的 `$技能名稱`；Claude 請先以 `/practical-work-kit:技能名稱` 選取相同助手，再貼內容。
 
 ```text
 使用 $check-my-work 核對這份預算。
@@ -30,7 +30,7 @@
 
 這是可自行試用的示例，不保證模型每次回覆相同。[完整範例](docs/EXAMPLES.md) 也有挑戰計畫、三個影片標題與換對話交接的輸入／輸出。
 
-## 安裝
+## Codex 安裝
 
 使用有 `plugin` 命令的 Codex CLI，執行：
 
@@ -39,7 +39,7 @@ codex plugin marketplace add Yingye107/practical-work-kit --ref main
 codex plugin add practical-work-kit@practical-work-kit
 ```
 
-安裝後開新的對話。要固定版本，把第一行的 `--ref main` 改成 `--ref v0.1.0`。可用以下命令確認狀態：
+安裝後開新的對話。要固定版本，把第一行的 `--ref main` 改成 `--ref v0.2.0`。可用以下命令確認狀態：
 
 ```sh
 codex plugin list --marketplace practical-work-kit --json
@@ -47,7 +47,35 @@ codex plugin list --marketplace practical-work-kit --json
 
 也可到 [Releases](https://github.com/Yingye107/practical-work-kit/releases) 下載 ZIP 與 SHA256SUMS，解壓後依 [INSTALL.txt](INSTALL.txt) 安裝。若你的 CLI 不認得 `plugin`，請依 [官方文件](https://developers.openai.com/plugins/build/plugins) 核對宿主支援。
 
-只選一個來源安裝。已啟用本機整合版或同名單一技能時，避免再同時啟用另一份。本專案在 GitHub 發布，並不代表已在 OpenAI 公開插件目錄上架。
+## Claude Code 安裝
+
+在終端機執行：
+
+```sh
+claude plugin marketplace add Yingye107/practical-work-kit
+claude plugin install practical-work-kit@practical-work-kit
+```
+
+開新對話後，用 `/practical-work-kit:check-my-work` 呼叫成果檢查員，其他三個名稱依下表使用。可用 `claude plugin list` 確認安裝；細節見 [Claude Code 官方說明](https://code.claude.com/docs/en/discover-plugins)。
+
+| 助手 | Claude 呼叫方式 |
+|---|---|
+| 成果檢查員 | `/practical-work-kit:check-my-work` |
+| 計畫挑戰者 | `/practical-work-kit:challenge-my-plan` |
+| 創意總監 | `/practical-work-kit:shape-my-idea` |
+| 交接助手 | `/practical-work-kit:carry-my-context` |
+
+## Claude 網頁／桌面版與 Cowork
+
+在 **Customize → Plugins** 選 **Add → Add marketplace**，輸入 `Yingye107/practical-work-kit`；也可以選 **Add → Upload plugin**，上傳 [最新版 ZIP](https://github.com/Yingye107/practical-work-kit/releases/latest)。聊天時輸入 `/`，選擇這個插件的技能。入口是否可用取決於帳號及組織設定，依 [Claude 官方說明](https://claude.com/docs/plugins/overview) 為準。
+
+從 Claude Code 終端機安裝只適用那台電腦，不會同時加入 Claude.ai 帳號。
+
+## 下載與版本
+
+同一份 `practical-work-kit-0.2.0.zip` 包含 Codex、Claude 的入口與四個技能。要在 Claude Code 固定版本，可解壓後按 [INSTALL.txt](INSTALL.txt) 的本機來源步驟安裝。
+
+每個宿主只選一個來源安裝。已啟用本機整合版或同名单一技能時，避免再同時啟用另一份。GitHub 發布不代表已在 OpenAI 或 Anthropic 公開目錄上架；本版未實測帳號端安裝或模型回答效果。
 
 ## 直接用這四句開始
 
@@ -78,6 +106,13 @@ codex plugin list --marketplace practical-work-kit --json
 python tools/validate.py
 python -m unittest discover -s tests -v
 python tools/build_release.py --output dist
+```
+
+已安裝 Claude Code 的維護者可另做宿主格式檢查：
+
+```sh
+claude plugin validate .claude-plugin/plugin.json --strict
+claude plugin validate .claude-plugin/marketplace.json --strict
 ```
 
 由 [YINGYE Studio](https://github.com/Yingye107) 發布，採 [Apache-2.0](LICENSE)。採用方法的原始来源與各自授權保留在 [SOURCE_NOTICES.txt](SOURCE_NOTICES.txt)、[licenses/](licenses/) 與 [provenance.json](provenance.json)。轉載或改作請一併保留。版本內容見 [CHANGELOG.md](CHANGELOG.md)。

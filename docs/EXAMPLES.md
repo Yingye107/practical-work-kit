@@ -2,6 +2,8 @@
 
 These inputs and outputs are illustrative, not measured host benchmarks. The useful result can be shorter or longer depending on your material. Replace the example with your own information and remove secrets before sharing it.
 
+Examples use Codex's `$skill-name`. In Claude, select `/practical-work-kit:skill-name` and paste the same material. For example, replace `$check-my-work` with `/practical-work-kit:check-my-work`. Installation and the four command names are in [the README](../README.md).
+
 ## 1. Check a budget / 核對預算
 
 **Request**

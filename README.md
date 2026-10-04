@@ -2,7 +2,7 @@
 
 ![Four AI skills: check work, challenge plans, shape ideas, and carry context.](docs/assets/social-preview.png)
 
-Four reusable AI skills for checking work, challenging plans, shaping ideas, and carrying context into the next conversation.
+Four reusable AI skills for **Codex and Claude**: check work, challenge plans, shape ideas, and carry context into the next conversation. Both hosts use the same skill files.
 
 [繁體中文](README.zh-TW.md) · [Examples](docs/EXAMPLES.md) · [Latest release](https://github.com/Yingye107/practical-work-kit/releases/latest) · [License](LICENSE)
 
@@ -17,7 +17,7 @@ Give the assistant the material you already have and say what you need. The skil
 
 ## See it in one minute
 
-Try a small budget check after installation:
+Try a small budget check after installation. Examples use Codex's `$skill-name`; in Claude, select the matching skill with `/practical-work-kit:skill-name`, then paste the same request.
 
 ```text
 Use $check-my-work to check this budget.
@@ -45,9 +45,30 @@ Start a new conversation after installation. To inspect the installation:
 codex plugin list --marketplace practical-work-kit --json
 ```
 
-For a fixed release, use `--ref v0.1.0` instead of `--ref main`. If your CLI does not recognize `plugin`, see the [official marketplace documentation](https://developers.openai.com/plugins/build/plugins) for your host and version. GitHub distribution and the OpenAI public plugin directory have separate installation and review paths; this repository does not claim a public-directory listing.
+For a fixed release, use `--ref v0.2.0` instead of `--ref main`. If your CLI does not recognize `plugin`, see the [official marketplace documentation](https://developers.openai.com/plugins/build/plugins) for your host and version.
 
-Prefer downloading a ZIP? Get `practical-work-kit-0.1.0.zip` and `SHA256SUMS.txt` from [Releases](https://github.com/Yingye107/practical-work-kit/releases), extract it into a dedicated folder, and follow [INSTALL.txt](INSTALL.txt).
+## Install in Claude Code
+
+Run these commands in your terminal:
+
+```sh
+claude plugin marketplace add Yingye107/practical-work-kit
+claude plugin install practical-work-kit@practical-work-kit
+```
+
+Start a new session, then use `/practical-work-kit:check-my-work`, `/practical-work-kit:challenge-my-plan`, `/practical-work-kit:shape-my-idea`, or `/practical-work-kit:carry-my-context`. To check the installation, run `claude plugin list`. See [Claude Code's official installation guide](https://code.claude.com/docs/en/discover-plugins).
+
+## Install in Claude chat or Cowork
+
+In Claude's **Customize → Plugins**, choose **Add → Add marketplace** and enter `Yingye107/practical-work-kit`. Alternatively, choose **Add → Upload plugin** and upload the release ZIP. In chat, type `/` and select a skill from Practical Work Kit. These options depend on your account and organization settings; see the [official Claude guide](https://claude.com/docs/plugins/overview).
+
+An installation from the Claude Code terminal stays on that machine; it does not add the plugin to your Claude.ai account.
+
+## Download or use a fixed version
+
+Get `practical-work-kit-0.2.0.zip` and `SHA256SUMS.txt` from [Releases](https://github.com/Yingye107/practical-work-kit/releases). The same ZIP includes both host manifests and all four skills. For a fixed Claude Code version, extract it into a dedicated folder and use the local marketplace instructions in [INSTALL.txt](INSTALL.txt).
+
+GitHub publishing does not mean approval or listing in OpenAI's or Anthropic's public directories. Claude Code installation and skill discovery were checked locally; model responses and Claude's account-based installation have not been tested by this release.
 
 Install one source of these skills. If you already use a local copy or individual versions, avoid enabling duplicate copies alongside this bundle.
 
@@ -86,6 +107,13 @@ Maintainers can validate and build with Python 3.11 or newer and Git. The Python
 python tools/validate.py
 python -m unittest discover -s tests -v
 python tools/build_release.py --output dist
+```
+
+Optional host checks require Claude Code:
+
+```sh
+claude plugin validate .claude-plugin/plugin.json --strict
+claude plugin validate .claude-plugin/marketplace.json --strict
 ```
 
 The CI checks package boundaries, references, metadata, license fingerprints, bounded secret signatures, and negative controls. Passing these checks is not a legal certification or a complete security audit. Changes to skills still need representative task checks.

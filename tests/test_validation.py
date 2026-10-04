@@ -126,6 +126,71 @@ class PackageControls(unittest.TestCase):
         with self.assertRaisesRegex(ValidationError, '^missing_or_unsafe_reference:'):
             validate_tree(self.root)
 
+    def change_json(self, rel, change):
+        path = self.root / rel
+        content = json.loads(path.read_text(encoding='utf-8'))
+        change(content)
+        path.write_text(json.dumps(content, ensure_ascii=False), encoding='utf-8')
+
+    def test_claude_version_drift_rejected(self):
+        self.change_json('.claude-plugin/plugin.json', lambda value: value.update(version='0.0.0'))
+        with self.assertRaisesRegex(ValidationError, '^claude_manifest_version$'):
+            validate_tree(self.root)
+
+    def test_claude_hooks_rejected(self):
+        self.change_json('.claude-plugin/plugin.json', lambda value: value.update(hooks='./hooks.json'))
+        with self.assertRaisesRegex(ValidationError, '^claude_runtime_manifest_field$'):
+            validate_tree(self.root)
+
+    def test_claude_skill_redirect_rejected(self):
+        self.change_json('.claude-plugin/plugin.json', lambda value: value.update(skills='../private'))
+        with self.assertRaisesRegex(ValidationError, '^claude_runtime_manifest_field$'):
+            validate_tree(self.root)
+
+    def test_claude_unsafe_marketplace_source_rejected(self):
+        for source in ('../outside', 'https://example.com/other.git', {'source': 'local', 'path': './'}):
+            with self.subTest(source=source):
+                self.change_json('.claude-plugin/marketplace.json',
+                                 lambda value: value['plugins'][0].update(source=source))
+                with self.assertRaisesRegex(ValidationError, '^claude_marketplace_source$'):
+                    validate_tree(self.root)
+
+    def test_claude_marketplace_component_injection_rejected(self):
+        self.change_json('.claude-plugin/marketplace.json',
+                         lambda value: value['plugins'][0].update(mcpServers='./server.json'))
+        with self.assertRaisesRegex(ValidationError, '^claude_marketplace_fields$'):
+            validate_tree(self.root)
+
+    def test_claude_marketplace_name_drift_rejected(self):
+        self.change_json('.claude-plugin/marketplace.json',
+                         lambda value: value['plugins'][0].update(name='other-plugin'))
+        with self.assertRaisesRegex(ValidationError, '^claude_marketplace_entry$'):
+            validate_tree(self.root)
+
+    def test_claude_duplicate_key_rejected(self):
+        for rel in ('.claude-plugin/plugin.json', '.claude-plugin/marketplace.json'):
+            with self.subTest(rel=rel):
+                (self.root / rel).write_text('{"name":"one","name":"two"}', encoding='utf-8')
+                with self.assertRaisesRegex(ValidationError, '^duplicate_json_key$'):
+                    validate_tree(self.root)
+
+    def test_claude_manifest_required(self):
+        (self.root / '.claude-plugin/plugin.json').unlink()
+        with self.assertRaisesRegex(ValidationError, '^public_file_set$'):
+            validate_tree(self.root)
+
+    def test_archive_claude_metadata_tamper_rejected(self):
+        result = build(self.root / 'dist', self.root)
+        original = self.root / 'dist' / result['archive']
+        for rel in ('.claude-plugin/plugin.json', '.claude-plugin/marketplace.json'):
+            with self.subTest(rel=rel):
+                changed = self.case / 'changed-claude.zip'
+                with zipfile.ZipFile(original) as good, zipfile.ZipFile(changed, 'w') as bad:
+                    for item in good.infolist():
+                        bad.writestr(item, b'changed' if item.filename == rel else good.read(item))
+                with self.assertRaisesRegex(ValidationError, '^archive_content$'):
+                    validate_archive(changed, self.root)
+
     def test_license_tamper_rejected(self):
         (self.root / 'licenses/Pablo-aps__prove-it.txt').write_text('changed license', encoding='utf-8')
         with self.assertRaisesRegex(ValidationError, '^license_hash:'):

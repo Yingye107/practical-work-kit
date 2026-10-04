@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 — 2026-10-05
+
+- Add Claude plugin and marketplace manifests while keeping one shared set of four skills for Codex and Claude.
+- Document Claude Code installation and skill commands, plus Claude chat/Cowork marketplace and ZIP entry points.
+- Release one ZIP for both hosts; keep prior releases available.
+- Validate Claude metadata, version parity, local source boundaries, and absence of runtime components with additional negative controls.
+
 ## 0.1.3 — Unreleased
 
 - For features that depend on a trigger or schedule, check whether execution started as well as whether it failed, using an observable result from the actual entry point.

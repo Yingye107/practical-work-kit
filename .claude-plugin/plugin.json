@@ -1,0 +1,13 @@
+{
+  "name": "practical-work-kit",
+  "version": "0.2.0",
+  "description": "Four practical AI skills to check work, challenge plans, shape ideas, and carry context.",
+  "author": {
+    "name": "YINGYE Studio",
+    "url": "https://github.com/Yingye107"
+  },
+  "homepage": "https://github.com/Yingye107/practical-work-kit",
+  "repository": "https://github.com/Yingye107/practical-work-kit",
+  "license": "Apache-2.0",
+  "keywords": ["productivity", "planning", "review", "creativity", "handoff"]
+}

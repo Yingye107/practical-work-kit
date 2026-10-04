@@ -20,6 +20,7 @@ UPSTREAMS = {'Pablo-aps/prove-it', 'bmad-code-org/BMAD-METHOD', 'jumpifequal/han
              'msitarzewski/agency-agents', 'obra/superpowers', 'phuryn/pm-skills', 'uchimata2/handoff-skill'}
 RELEASE_FILES = {
     'plugin.json', '.agents/plugins/marketplace.json', 'provenance.json',
+    '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json',
     'LICENSE', 'SOURCE_NOTICES.txt', 'INSTALL.txt', 'QUICK_START.txt',
     'README.md', 'README.zh-TW.md', 'CHANGELOG.md', 'CONTRIBUTING.md',
     'SECURITY.md', 'PRIVACY.md', 'CODE_OF_CONDUCT.md', 'docs/EXAMPLES.md',
@@ -170,6 +171,28 @@ def validate_tree(root=ROOT):
         require(re.search(r'^description:\s*\S', front.group(1), re.M), 'skill_description:' + role)
         ui = texts[f'skills/{role}/agents/openai.yaml']
         require('$' + role in ui and not re.search(r'^(?:dependencies|hooks|scripts|policy):', ui, re.M), 'skill_ui_or_runtime:' + role)
+
+    # Both hosts discover the same default skills/ directory. No runtime components.
+    claude = parse_json(texts['.claude-plugin/plugin.json'])
+    require(set(claude) == {'name', 'version', 'description', 'author', 'homepage',
+                           'repository', 'license', 'keywords'}, 'claude_runtime_manifest_field')
+    for key in ('name', 'version', 'license', 'author', 'homepage', 'repository', 'keywords'):
+        require(claude.get(key) == manifest.get(key), 'claude_manifest_' + key)
+    require(isinstance(claude.get('description'), str) and bool(claude['description']),
+            'claude_manifest_description')
+    claude_market = parse_json(texts['.claude-plugin/marketplace.json'])
+    require(set(claude_market) == {'name', 'description', 'owner', 'plugins'} and
+            claude_market['name'] == claude['name'] and
+            claude_market['description'] == claude['description'] and
+            claude_market['owner'] == {'name': claude['author']['name']}, 'claude_marketplace_identity')
+    require(isinstance(claude_market['plugins'], list) and len(claude_market['plugins']) == 1,
+            'claude_marketplace_entries')
+    entry = claude_market['plugins'][0]
+    require(isinstance(entry, dict) and set(entry) == {'name', 'source', 'description'},
+            'claude_marketplace_fields')
+    require(entry['name'] == claude['name'] and entry['description'] == claude['description'],
+            'claude_marketplace_entry')
+    require(entry['source'] == './', 'claude_marketplace_source')
 
     provenance = parse_json(texts['provenance.json'])
     sources = provenance.get('sources', [])
