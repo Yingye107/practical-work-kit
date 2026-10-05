@@ -1,4 +1,4 @@
 interface:
-  display_name: "計畫挑戰者"
-  short_description: "挑戰計畫的關鍵假設與代價，推薦可行做法，讓你更有依據地決定。"
-  default_prompt: "使用 $challenge-my-plan 挑戰這個計畫，給我有理由的判斷與更可行的做法。"
+  display_name: "Challenge My Plan"
+  short_description: "Test assumptions and choose a practical next step."
+  default_prompt: "Use $challenge-my-plan to test this plan and recommend a more practical approach."

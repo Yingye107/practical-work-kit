@@ -1,7 +1,7 @@
 {
   "name": "practical-work-kit",
   "interface": {
-    "displayName": "實用工作四助手"
+    "displayName": "Practical Work Kit"
   },
   "plugins": [
     {
@@ -11,7 +11,7 @@
         "path": "./"
       },
       "interface": {
-        "displayName": "實用工作四助手"
+        "displayName": "Practical Work Kit"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -1,10 +1,10 @@
-# Practical Work Kit · 實用工作四助手
+# Practical Work Kit
 
 ![Four AI skills: check work, challenge plans, shape ideas, and carry context.](docs/assets/social-preview.png)
 
 Four reusable AI skills for **Codex and Claude**: check work, challenge plans, shape ideas, and carry context into the next conversation. Both hosts use the same skill files.
 
-[繁體中文](README.zh-TW.md) · [Examples](docs/EXAMPLES.md) · [Latest release](https://github.com/Yingye107/practical-work-kit/releases/latest) · [License](LICENSE)
+[Examples](docs/EXAMPLES.md) · [Latest release](https://github.com/Yingye107/practical-work-kit/releases/latest) · [License](LICENSE)
 
 Give the assistant the material you already have and say what you need. The skills aim to produce useful answers at the requested scale: a short message gets a short review, three titles stay three titles, and a handoff preserves the draft you actually wrote.
 
@@ -45,7 +45,7 @@ Start a new conversation after installation. To inspect the installation:
 codex plugin list --marketplace practical-work-kit --json
 ```
 
-For a fixed release, use `--ref v0.2.0` instead of `--ref main`. If your CLI does not recognize `plugin`, see the [official marketplace documentation](https://developers.openai.com/plugins/build/plugins) for your host and version.
+For a fixed release, use `--ref v0.2.1` instead of `--ref main`. If your CLI does not recognize `plugin`, see the [official marketplace documentation](https://developers.openai.com/plugins/build/plugins) for your host and version.
 
 ## Install in Claude Code
 
@@ -66,7 +66,7 @@ An installation from the Claude Code terminal stays on that machine; it does not
 
 ## Download or use a fixed version
 
-Get `practical-work-kit-0.2.0.zip` and `SHA256SUMS.txt` from [Releases](https://github.com/Yingye107/practical-work-kit/releases). The same ZIP includes both host manifests and all four skills. For a fixed Claude Code version, extract it into a dedicated folder and use the local marketplace instructions in [INSTALL.txt](INSTALL.txt).
+Get `practical-work-kit-0.2.1.zip` and `SHA256SUMS.txt` from [Releases](https://github.com/Yingye107/practical-work-kit/releases). The same ZIP includes both host manifests and all four skills. For a fixed Claude Code version, extract it into a dedicated folder and use the local marketplace instructions in [INSTALL.txt](INSTALL.txt).
 
 GitHub publishing does not mean approval or listing in OpenAI's or Anthropic's public directories. Claude Code installation and skill discovery were checked locally; model responses and Claude's account-based installation have not been tested by this release.
 

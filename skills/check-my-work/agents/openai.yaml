@@ -1,4 +1,4 @@
 interface:
-  display_name: "成果檢查員"
-  short_description: "檢查文件、預算或程式成果，找出影響使用的問題並說明先修哪裡。"
-  default_prompt: "使用 $check-my-work 檢查這份成果，告訴我是否可用、漏了什麼和先修哪裡。"
+  display_name: "Check My Work"
+  short_description: "Find errors and gaps in finished work."
+  default_prompt: "Use $check-my-work to check this result, identify gaps, and tell me what to fix first."

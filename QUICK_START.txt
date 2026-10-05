@@ -1,17 +1,19 @@
-實用工作四助手 — Codex、Claude 共用
+Practical Work Kit — Codex + Claude
 
-Codex 使用下方 $技能名稱；Claude Code 使用 /practical-work-kit:技能名稱。
-Claude 網頁／桌面聊天可輸入 / 選取插件技能。選好後貼上相同內容即可。
+In Codex, use the $skill-name shown below.
+In Claude Code, use /practical-work-kit:skill-name.
+In Claude chat, type / and select a skill from the plugin.
+Select the skill, paste your material, and say what you need:
 
-貼上你的內容，用日常語句說明需要的幫忙：
+Check work: Use $check-my-work to check this result, identify gaps, and tell me what to fix first.
+Challenge a plan: Use $challenge-my-plan to test this plan and recommend a more practical approach.
+Shape an idea: Use $shape-my-idea to turn this idea into a direction within my time and resources.
+Carry context: Use $carry-my-context to prepare a handoff I can paste into a new conversation.
 
-成果檢查員：使用 $check-my-work 檢查這份成果，告訴我是否可用、漏了什麼和先修哪裡。
-計畫挑戰者：使用 $challenge-my-plan 挑戰這個計畫，給我有理由的判斷與更可行的做法。
-創意總監：使用 $shape-my-idea 把這個點子變成具體方向，符合我的時間與資源。
-交接助手：使用 $carry-my-context 整理這段對話，給我可貼到新對話的交接。
-
-回覆跟隨你的語言與篇幅要求。文字就能開始；有可讀附件及工具才加深檢查。
-只裝整合版或需要的單一角色，避免同一技能重複安裝。
-交接不會讓另一台電腦自動取得舊附件或本機檔案；成果只能依實際可用證據判斷。
-本包以 GitHub 發布，不代表 OpenAI／Anthropic 公開目錄已上架。安裝見 INSTALL.txt。
-介紹及完整範例見 README.zh-TW.md 與 docs/EXAMPLES.md。
+Set the language and length you want. Pasted text is enough to start;
+readable attachments and available tools can deepen a check.
+Install the bundle or individual skills from one source, avoiding duplicates.
+A handoff does not transfer old attachments or local files to another device.
+Checks cover only the evidence actually available.
+GitHub publishing is separate from public-directory approval by OpenAI or Anthropic.
+See INSTALL.txt for installation and docs/EXAMPLES.md for worked examples.

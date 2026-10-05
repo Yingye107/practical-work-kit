@@ -22,7 +22,7 @@ RELEASE_FILES = {
     'plugin.json', '.agents/plugins/marketplace.json', 'provenance.json',
     '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json',
     'LICENSE', 'SOURCE_NOTICES.txt', 'INSTALL.txt', 'QUICK_START.txt',
-    'README.md', 'README.zh-TW.md', 'CHANGELOG.md', 'CONTRIBUTING.md',
+    'README.md', 'CHANGELOG.md', 'CONTRIBUTING.md',
     'SECURITY.md', 'PRIVACY.md', 'CODE_OF_CONDUCT.md', 'docs/EXAMPLES.md',
     'docs/assets/social-preview.svg', 'docs/assets/social-preview.png',
     'docs/assets/plugin-icon.svg',

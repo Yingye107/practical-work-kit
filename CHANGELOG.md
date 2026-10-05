@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-10-05
+
+- Make the public README, installation guide, quick start, worked examples, and plugin interface copy English-only.
+- Translate all four skill labels, descriptions, and starter prompts; keep the shared skill instructions and behavior unchanged.
+- Remove the Chinese README from the current source and release ZIP. Earlier releases and Git history remain available.
+
 ## 0.2.0 — 2026-10-05
 
 - Add Claude plugin and marketplace manifests while keeping one shared set of four skills for Codex and Claude.

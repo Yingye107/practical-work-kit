@@ -1,28 +1,24 @@
-Practical Work Kit 0.2.0 — Codex + Claude / 共用安裝包
+Practical Work Kit 0.2.1 — Codex + Claude
 
-Codex — From GitHub / 從 GitHub：
+Codex — Install from GitHub:
 codex plugin marketplace add Yingye107/practical-work-kit --ref main
 codex plugin add practical-work-kit@practical-work-kit
-
-For release 0.2.0, replace --ref main with --ref v0.2.0.
-要固定版本，把 --ref main 改成 --ref v0.2.0。
-Inspect / 確認：
+For a fixed release, replace --ref main with --ref v0.2.1.
+Check the installation:
 codex plugin list --marketplace practical-work-kit --json
 
-Claude Code — From GitHub / 從 GitHub：
+Claude Code — Install from GitHub:
 claude plugin marketplace add Yingye107/practical-work-kit
 claude plugin install practical-work-kit@practical-work-kit
-Inspect / 確認：
+Check the installation:
 claude plugin list
 
-Release ZIP / 固定版本 ZIP：
-Download practical-work-kit-0.2.0.zip and SHA256SUMS.txt from:
-https://github.com/Yingye107/practical-work-kit/releases/tag/v0.2.0
+Install from a release ZIP:
+Download practical-work-kit-0.2.1.zip and SHA256SUMS.txt from:
+https://github.com/Yingye107/practical-work-kit/releases/tag/v0.2.1
 Extract into a dedicated folder. Keep hidden directories: the root should contain
 plugin.json, skills/, .agents/, and .claude-plugin/.
-解壓到專用資料夾，保留隱藏目錄，根目錄應有以上四個入口。
 Replace "./practical-work-kit" below with the extracted folder's path.
-把下方 "./practical-work-kit" 改成解壓後資料夾的路徑。
 Codex:
 codex plugin marketplace add "./practical-work-kit"
 codex plugin add practical-work-kit@practical-work-kit
@@ -30,27 +26,23 @@ Claude Code:
 claude plugin marketplace add "./practical-work-kit"
 claude plugin install practical-work-kit@practical-work-kit
 
-Claude chat / desktop / Cowork：
+Claude chat, desktop, or Cowork:
 Customize > Plugins > Add > Add marketplace: enter Yingye107/practical-work-kit.
 Or choose Add > Upload plugin and upload the release ZIP.
-在上述入口加入 GitHub 來源，或直接上傳同一份 ZIP。
 Availability depends on your account and organization settings.
-入口取決於帳號及組織設定。Claude Code 的本機安裝不會加入 Claude.ai 帳號。
-Official guide / 官方說明：https://claude.com/docs/plugins/overview
+An installation from Claude Code does not add the plugin to your Claude.ai account.
+Official guide: https://claude.com/docs/plugins/overview
 
-Start a new conversation after installation. Follow QUICK_START.txt.
+Start a new conversation after installation and follow QUICK_START.txt.
 Codex: $check-my-work
 Claude Code: /practical-work-kit:check-my-work
 Claude chat: type / and select the plugin's skill.
-安裝後開新對話；Claude 聊天輸入 / 選擇技能，接著貼上內容。
 
 Install one source per host; avoid duplicate copies.
-每個宿主只選一個來源，避免和既有本機版本或同名技能重複啟用。
 If a CLI does not recognize plugin commands, check its official documentation:
 https://developers.openai.com/plugins/build/plugins
 https://code.claude.com/docs/en/discover-plugins
 
-This package adds no background service or account connection. GitHub publishing
-does not mean listing or approval in OpenAI's or Anthropic's public directories.
-本包不增加背景服務或帳號連接；GitHub 發布不代表兩家的公開目錄已上架。
-See README.md / README.zh-TW.md for validation scope and boundaries.
+The package adds no background service or account connection. GitHub publishing
+does not mean approval or listing in OpenAI's or Anthropic's public directories.
+See README.md for the validation scope and boundaries.
